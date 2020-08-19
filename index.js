@@ -13,7 +13,7 @@ const  con = mysql.createConnection ({
 con.connect();
 
 // 执行sql语句
-const sql = `update users set realname='李四2' where username='lisi';`
+const sql = `insert into blogs (title,content,createtime, author) values ('标题c','内容c','1500000001','liuhuan')`
 con.query(sql, (err,result) => {
     if (err) {
         console.error(err)
